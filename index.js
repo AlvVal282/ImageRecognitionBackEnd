@@ -26,7 +26,7 @@ if (!AZURE_ENDPOINT || !AZURE_KEY) {
   process.exit(1);
 }
 
-app.use(cors({ origin: 'http://localhost:8081' })); // Adjust as needed for your frontend origin
+app.use(cors({ origin: 'http://localhost:8081' }));
 
 const upload = multer({
   dest: 'uploads/',
@@ -75,7 +75,7 @@ app.post('/analyze', upload.single('image'), async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the Image Recognition Backend');
+  res.send('Welcome to the Image Recognition Backend for the Portfolio Website');
 });
 
 app.listen(port, () => {
